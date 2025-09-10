@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Produits – NovaMarket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nos Produits</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="cart.html">Panier</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal.html">Mentions légales</a>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <label for="category">Catégorie :</label>
+    <select id="category" onchange="filterProducts()">
+      <option value="all">Toutes</option>
+      <option value="tech">Tech</option>
+      <option value="mode">Mode</option>
+      <option value="maison">Maison</option>
+      <option value="lifestyle">Lifestyle</option>
+    </select>
+
+    <label for="price">Prix max :</label>
+    <input type="range" id="price" min="10" max="200" value="200" oninput="filterProducts()">
+    <span id="priceValue">200€</span>
+  </section>
+
+  <section class="products" id="productList">
+    <!-- Produits générés par script.js -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
