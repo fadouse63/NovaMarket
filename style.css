@@ -1,10 +1,10 @@
-/* 🌟 Design pro, clair et moderne */
+/* 🌟 Style général */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F5F7FA;
-  color: #1A1A1A;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
+  color: #1a1a1a;
 }
 
 /* 🧠 En-tête */
@@ -21,7 +21,6 @@ header h1 {
   color: white;
 }
 
-/* 🧭 Navigation */
 nav {
   margin-top: 10px;
 }
@@ -49,66 +48,69 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* 🖼️ Accueil */
+/* 🖼️ Section d’accueil avec fond animé */
 .hero {
+  background: linear-gradient(135deg, #6C63FF, #5A55D1, #4A47C5);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+  padding: 120px 20px;
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(to right, #6C63FF, #5A55D1);
   color: white;
-  animation: fadeIn 1s ease-in;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 10px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 30px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
-/* 🔘 Bouton principal */
 .btn {
   background: linear-gradient(to right, #6C63FF, #5A55D1);
-  padding: 12px 24px;
+  padding: 14px 28px;
   color: white;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(108,99,255,0.5);
+  box-shadow: 0 0 15px rgba(108,99,255,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(108,99,255,0.7);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(108,99,255,0.7);
 }
 
-/* 🛍️ Produits */
+/* 🛍️ Section produits */
 .products {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 50px;
+  padding: 60px 20px;
   flex-wrap: wrap;
   background-color: #fff;
 }
 
-/* 🧊 Carte produit */
 .product-card {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 15px;
-  width: 250px;
+  width: 260px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
 .product-card img {
@@ -119,11 +121,11 @@ nav a:hover::after {
 
 .product-card h3 {
   margin: 10px 0;
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 .product-card p {
-  font-size: 0.95em;
+  font-size: 1em;
   color: #555;
   margin-bottom: 15px;
 }
@@ -143,15 +145,16 @@ nav a:hover::after {
   background: linear-gradient(to right, #5A55D1, #6C63FF);
 }
 
-/* 📞 Contact */
+/* 📞 Section contact */
 .contact-form {
-  padding: 50px;
+  padding: 60px 20px;
   text-align: center;
   background-color: #F5F7FA;
 }
 
 .contact-form h2 {
   margin-bottom: 30px;
+  font-size: 2em;
 }
 
 form input, form textarea {
@@ -180,8 +183,14 @@ form button:hover {
   transform: scale(1.05);
 }
 
-/* ✨ Animation */
+/* ✨ Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
