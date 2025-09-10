@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Produits – NovaMarket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nos Produits</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://source.unsplash.com/200x200/?watch" alt="NovaWatch">
+      <h3>NovaWatch</h3>
+      <p>Montre connectée futuriste</p>
+      <button onclick="addToCart('NovaWatch')">Ajouter au panier</button>
+    </div>
+    <div class="product-card">
+      <img src="https://source.unsplash.com/200x200/?lamp" alt="NovaLamp">
+      <h3>NovaLamp</h3>
+      <p>Lampe LED interactive</p>
+      <button onclick="addToCart('NovaLamp')">Ajouter au panier</button>
+    </div>
+    <div class="product-card">
+      <img src="https://source.unsplash.com/200x200/?sneakers" alt="NovaSneaks">
+      <h3>NovaSneaks</h3>
+      <p>Sneakers édition limitée</p>
+      <button onclick="addToCart('NovaSneaks')">Ajouter au panier</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

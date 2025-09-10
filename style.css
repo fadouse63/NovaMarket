@@ -1,27 +1,187 @@
+/* 🌟 Design pro, clair et moderne */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0D0D0D;
-  color: white;
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F7FA;
+  color: #1A1A1A;
   margin: 0;
+  padding: 0;
 }
+
+/* 🧠 En-tête */
 header {
-  background-color: #9D00FF;
+  background-color: #6C63FF;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: white;
+}
+
+/* 🧭 Navigation */
+nav {
+  margin-top: 10px;
+}
+
 nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  position: relative;
 }
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* 🖼️ Accueil */
 .hero {
   text-align: center;
   padding: 100px 20px;
+  background: linear-gradient(to right, #6C63FF, #5A55D1);
+  color: white;
+  animation: fadeIn 1s ease-in;
 }
-button {
-  background-color: #9D00FF;
+
+.hero h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* 🔘 Bouton principal */
+.btn {
+  background: linear-gradient(to right, #6C63FF, #5A55D1);
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(108,99,255,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(108,99,255,0.7);
+}
+
+/* 🛍️ Produits */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+/* 🧊 Carte produit */
+.product-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.3em;
+}
+
+.product-card p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.product-card button {
+  background: linear-gradient(to right, #6C63FF, #5A55D1);
   color: white;
   padding: 10px 20px;
   border: none;
+  border-radius: 20px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+  background: linear-gradient(to right, #5A55D1, #6C63FF);
+}
+
+/* 📞 Contact */
+.contact-form {
+  padding: 50px;
+  text-align: center;
+  background-color: #F5F7FA;
+}
+
+.contact-form h2 {
+  margin-bottom: 30px;
+}
+
+form input, form textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #1A1A1A;
+}
+
+form button {
+  background: linear-gradient(to right, #6C63FF, #5A55D1);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
